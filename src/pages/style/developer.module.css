@@ -1,0 +1,16 @@
+.mainSec{
+    background-color: blueviolet;
+    width: 100%;
+    padding: 50px 15%;
+}
+.DeveloperSec{
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    font-family: georgia, serif;
+}
+.DeveloperSec p{
+    text-align: left;
+}
