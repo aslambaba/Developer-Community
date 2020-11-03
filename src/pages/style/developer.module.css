@@ -1,5 +1,5 @@
 .mainSec{
-    background-color: blueviolet;
+    background-color: #191919;
     width: 100%;
     padding: 50px 15%;
 }
@@ -9,8 +9,17 @@
     text-align: center;
     padding: 20px 10px;
     border-radius: 10px;
-    font-family: georgia, serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 .DeveloperSec p{
     text-align: left;
+}
+.DeveloperImage{
+    margin-bottom: 30px;
+    height: 400px;
+}
+.DeveloperImage img{
+    height: 100%;
+    background-size: 100% 100%;
 }

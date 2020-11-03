@@ -1,0 +1,20 @@
+.MainConatiner{
+    padding: 30px 10%;
+}
+.Grid{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+}
+.Grid img{
+    height: 150px ;
+}
+.Grid button{
+    padding: 3px 18px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+}
