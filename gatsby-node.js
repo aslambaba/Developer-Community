@@ -14,7 +14,16 @@ const ArrayData = [
     }
 ]
 
-exports.createPages = async function ({actions}){
+exports.createPages = async function ({ actions, graphql }) {
+
+    const result = await graphql(`{
+        allContentfulDevelopers {
+            nodes {
+                name
+                job
+            }
+            }
+    }`)
     actions.createPage(
         {
             path: "/developer",
@@ -25,13 +34,16 @@ exports.createPages = async function ({actions}){
             },
         }
     );
+    console.log(result);
+    const record = result.data.allContentfulDevelopers.nodes;
     actions.createPage(
         {
             path: "developers",
             component: require.resolve("./src/templates/developers.js"),
-            context: ArrayData
+            context: {
+                CommunityRecords: record
+            } 
         }
     );
-    
     console.log("End of Gatsby Node.js");
-}
+} 
