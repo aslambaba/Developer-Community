@@ -3,11 +3,12 @@ import Style from './style/developers.module.css';
 import Grid from '@material-ui/core/Grid';
 import Image from '../images/aslam2.png';
 
-function Developers() {
+function Developers({pageContext}) {
+    console.log(pageContext);
     return (
         <div className={Style.MainConatiner}>
             <Grid container spacing={5}>
-                <Grid item xs={4} className={Style.Grid} spacing={4} >
+                <Grid item xs={4} className={Style.Grid}>
                     <img src={Image} />
                     <h2>Aslam Sarfraz</h2>
                     <p>Full Stack Web Developer</p>
