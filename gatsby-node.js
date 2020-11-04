@@ -21,6 +21,11 @@ exports.createPages = async function ({ actions, graphql }) {
             nodes {
                 name
                 job
+                image {
+                    file {
+                      url
+                    }
+                  }
             }
             }
     }`)

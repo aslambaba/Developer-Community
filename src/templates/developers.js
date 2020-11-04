@@ -12,7 +12,7 @@ function Developers({ pageContext }) {
                     Object.keys(pageContext).map(obj => {
                         return (
                             <Grid item xs={4} className={Style.Grid} key={obj}>
-                                <img src={Image} alt={pageContext[obj].name}/>
+                                <img src={pageContext[obj].image.file.url} alt={pageContext[obj].name}/>
                                 <h2>{pageContext[obj].name}</h2>
                                 <p>{pageContext[obj].job}</p>
                                 <button>View Profile</button>
