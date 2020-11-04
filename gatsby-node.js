@@ -36,18 +36,13 @@ exports.createPages = async function ({ actions, graphql }) {
     );
     console.log(result);
     const record = result.data.allContentfulDevelopers.nodes;
-    console.log("Outside "+record);
-    record.forEach(element => {
-        console.log("Inside " + element);
-        actions.createPage(
-            {
-                path: "developers",
-                component: require.resolve("./src/templates/developers.js"),
-                context: {
-                    CommunityRecords: element
-                } 
-            }
-        ); 
-    });
+    console.log(record);
+    actions.createPage(
+        {
+            path: "developers",
+            component: require.resolve("./src/templates/developers.js"),
+            context: record,
+        }
+    ); 
     console.log("End of Gatsby Node.js");
 } 
