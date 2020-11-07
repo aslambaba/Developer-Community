@@ -1,19 +1,4 @@
 
-const ArrayData = [
-    {
-        name: "Usama Yasin",
-        Job: "Mern Stack Developer",
-    },
-    {
-        name: "Aslam Sarfraz",
-        Job: "Full Stack Developer"
-    },
-    {
-        name: "Uzair Ishfaq",
-        Job: "LAMP Stack Developer",
-    }
-]
-
 exports.createPages = async function ({ actions, graphql }) {
 
     const result = await graphql(`{
@@ -28,7 +13,22 @@ exports.createPages = async function ({ actions, graphql }) {
                   }
             }
             }
-    }`)
+    }`);
+    
+
+    console.log(result);
+    const record = result.data.allContentfulDevelopers.nodes;
+    console.log(record);
+
+    actions.createPage(
+        {
+            path: "developers",
+            component: require.resolve("./src/templates/developers.js"),
+            context: record,
+        }
+    ); 
+
+
     actions.createPage(
         {
             path: "/developer",
@@ -39,15 +39,6 @@ exports.createPages = async function ({ actions, graphql }) {
             },
         }
     );
-    console.log(result);
-    const record = result.data.allContentfulDevelopers.nodes;
-    console.log(record);
-    actions.createPage(
-        {
-            path: "developers",
-            component: require.resolve("./src/templates/developers.js"),
-            context: record,
-        }
-    ); 
+
     console.log("End of Gatsby Node.js");
 } 

@@ -1,7 +1,6 @@
 import React from 'react';
 import Style from './style/developers.module.css';
 import Grid from '@material-ui/core/Grid';
-import Image from '../images/aslam2.png';
 
 function Developers({ pageContext }) {
     console.log(pageContext);

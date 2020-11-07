@@ -1,12 +1,14 @@
 import React from "react"
 import Layout from '../components/layout';
+import Home from '../templates/home.js';
 
-function IndexPage(){
-  return(
+function IndexPage() {
+
+  return (
     <Layout>
-      <h1>Hello Gatsby</h1>
+      <Home />
     </Layout>
-    
+
   )
 }
 
