@@ -22,13 +22,20 @@ exports.createPages = async function ({ actions, graphql }) {
 
     actions.createPage(
         {
-            path: "developers",
-            component: require.resolve("./src/templates/developers.js"),
+            path: "/",
+            component: require.resolve("./src/templates/home.js"),
             context: record,
         }
     ); 
 
-
+    actions.createPage(
+        {
+            path: "developers",
+            component: require.resolve("./src/templates/developers.js"),
+            context: record,
+        }
+    );
+    
     actions.createPage(
         {
             path: "/developer",
