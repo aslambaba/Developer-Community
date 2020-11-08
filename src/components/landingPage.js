@@ -1,7 +1,11 @@
 import React from 'react';
+import Style from './style/landingpage.module.css';
+
 function landingPage(){
     return(
-        <h2>Landing Page</h2>
+        <div className={Style.main}>
+            <h1>Hello</h1>
+        </div>
     )
 };
 

@@ -19,3 +19,18 @@
     background-color: black;
     border-radius: 4px;
 }
+.DeveloperSec{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: #191919;
+}
+.DeveloperSec h2{
+    text-align: center;
+    color: white;
+}
+.DeveloperSec img{
+    height:150px;
+    margin: 0px 20px
+}

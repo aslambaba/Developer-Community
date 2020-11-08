@@ -1,20 +1,28 @@
 import React from 'react';
-import LandingPage from '../components/landingPage';
+import LandingPage from '../components/landingpage';
+import Layout from '../components/layout';
+import Style from './style/developers.module.css';
+
 
 function home({ pageContext }) {
 
     console.log(pageContext);
     return (
         <div>
-            <LandingPage />
-            <h1>Gatsby</h1>
-            {Object.keys(pageContext).map((obj) => {
-                if (obj < 3) {
-                    return (
-                        <p key={obj}>{pageContext[obj].name}</p>
-                    )
-                }
-            })}
+            <Layout>
+                <LandingPage />
+                <div className={Style.DeveloperSec}>
+                    <h2>Meet Our Developers</h2>
+                    {
+                        Object.keys(pageContext).map(obj => {
+                            return (
+                                <img src={pageContext[obj].image.file.url} alt={pageContext[obj].name} />
+                            );
+                        })
+                    }
+                </div>
+            </Layout>
+
         </div>
 
     );

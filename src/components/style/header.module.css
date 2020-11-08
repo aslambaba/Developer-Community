@@ -1,6 +1,30 @@
 .header{
-    height: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 30px;
     width: 100%;
-    background-color: aquamarine;
-    text-align: center;
+    background-color: #000000cc;
+}
+.logo{
+    text-align: left;
+    display: inline-block;
+    width: 50%;
+    color: white;
+}
+.logo h3{
+    margin: 0;
+    padding: 0;
+}
+.link{
+    text-align: right;
+    width: 50%;
+    display: inline-block;
+    
+}
+.link a{
+    margin: 0;
+    margin: 0px 20px;
+    text-decoration: none;
+    color: white;
 }
