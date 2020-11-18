@@ -16,7 +16,7 @@ function Developers({ pageContext }) {
                                     <img src={pageContext[obj].image.file.url} alt={pageContext[obj].name} />
                                     <h2>{pageContext[obj].name}</h2>
                                     <p>{pageContext[obj].job}</p>
-                                    <button>View Profile</button>
+                                    <a href={`/developer/${pageContext[obj].name}`}><button>View Profile</button></a>
                                 </Grid>
                             );
                         })

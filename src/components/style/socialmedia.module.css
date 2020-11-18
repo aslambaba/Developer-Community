@@ -1,7 +1,10 @@
 .SocialMedia{
+    text-align: center;
     margin: 0;
     padding: 0;
-    height: 100px;
     width: 100%;
-    background-color: black;
+}
+.SocialMedia h4{
+    margin: 0;
+    margin: 10px 0px;
 }

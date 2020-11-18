@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Style = {
-    width: '40%',
+    textAlign: 'center',
     border: 'none',
     outline: 'none',
     backgroundColor: '#6cd206',
     color: 'white',
-    padding: '8px 14px',
-    borderRadius: '4px',
+    padding: '3px 30px',
+    borderRadius: '3px',
 }
 
 function Hireme(){

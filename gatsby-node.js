@@ -36,16 +36,16 @@ exports.createPages = async function ({ actions, graphql }) {
         }
     );
     
-    actions.createPage(
-        {
-            path: "/developer",
-            component: require.resolve('./src/templates/developer.js'),
-            context: {
-                name: 'Sir Aamir Pinger',
-                Data: 'Hello This is the Discription',
-            },
-        }
-    );
+    record.forEach(element => {
+        console.log(element.name);
+        actions.createPage(
+            {
+                path: `/developer/${element.name}`,
+                component: require.resolve('./src/templates/developer.js'),
+                context: element,
+            }
+        )
+    });
 
     console.log("End of Gatsby Node.js");
 } 

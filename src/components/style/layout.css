@@ -122,6 +122,8 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
+  font-size: 25px;
+  margin: 0px 3px;
 }
 code,
 kbd,

@@ -1,25 +1,49 @@
 .mainSec{
     background-color: #191919;
     width: 100%;
-    padding: 50px 15%;
+    padding: 100px 15%;
 }
 .DeveloperSec{
     background-color: white;
     width: 100%;
-    text-align: center;
     padding: 20px 10px;
     border-radius: 10px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-.DeveloperSec p{
+.DeveloperTitle{
+    width: 70%;
+    margin: 0;
     text-align: left;
+    display: inline-block;
+}
+.DeveloperTitle h1, .DeveloperTitle p{
+    margin: 0;
+    margin: 5px 0;
 }
 .DeveloperImage{
-    margin-bottom: 30px;
-    height: 400px;
+    width: 20%;
+    text-align: left;
+    margin: 0;
+    display: inline-block;
 }
 .DeveloperImage img{
-    height: 100%;
-    background-size: 100% 100%;
+    height: 100px;
+    margin: 0;
+}
+.DeveloperData{
+    padding: 20px 10px;
+    width: 100%;
+}
+.DeveloperBio{
+    display: inline-block;
+    width: 70%;
+
+}
+.DeveloperBio p{
+    margin: 0;
+}
+.DeveloperSocial{
+    margin: 20px 0;
+    text-align: center;
 }
