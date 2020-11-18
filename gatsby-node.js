@@ -10,12 +10,15 @@ exports.createPages = async function ({ actions, graphql }) {
                     file {
                       url
                     }
-                  }
+                }
+                bio
+                facebook
+                github
+                linkedin
             }
             }
     }`);
     
-
     console.log(result);
     const record = result.data.allContentfulDevelopers.nodes;
     console.log(record);
