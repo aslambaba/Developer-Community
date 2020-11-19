@@ -124,6 +124,7 @@ svg:not(:root) {
   overflow: hidden;
   font-size: 25px;
   margin: 0px 3px;
+  color:#191919;
 }
 code,
 kbd,

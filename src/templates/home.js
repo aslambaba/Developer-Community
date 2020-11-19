@@ -16,7 +16,7 @@ function home({ pageContext }) {
                     {
                         Object.keys(pageContext).map(obj => {
                             return (
-                                <img src={pageContext[obj].image.file.url} alt={pageContext[obj].name} />
+                                <a href={`/developer/${pageContext[obj].name}`}><img src={pageContext[obj].image.file.url} alt={pageContext[obj].name} /></a>
                             );
                         })
                     }

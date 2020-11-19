@@ -11,14 +11,25 @@ exports.createPages = async function ({ actions, graphql }) {
                       url
                     }
                 }
-                bio
-                facebook
-                github
-                linkedin
+                facebook {
+                    internal {
+                        content
+                    }
+                }
+                github {
+                    internal {
+                        content
+                    }
+                }
+                linkedin {
+                    internal {
+                        content
+                    }
+                }
             }
             }
     }`);
-    
+
     console.log(result);
     const record = result.data.allContentfulDevelopers.nodes;
     console.log(record);
@@ -29,7 +40,7 @@ exports.createPages = async function ({ actions, graphql }) {
             component: require.resolve("./src/templates/home.js"),
             context: record,
         }
-    ); 
+    );
 
     actions.createPage(
         {
@@ -38,7 +49,7 @@ exports.createPages = async function ({ actions, graphql }) {
             context: record,
         }
     );
-    
+
     record.forEach(element => {
         console.log(element.name);
         actions.createPage(

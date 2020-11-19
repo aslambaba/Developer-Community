@@ -7,9 +7,9 @@ function SocialMedia({social}) {
     return (
         <div className={Style.SocialMedia}>
             <h4>Social Media</h4>
-            <a href={social.pageContext.facebook}><AiFillFacebook/></a>
-            <a href={social.pageContext.linkedin}><AiFillLinkedin /></a>
-            <a href={social.pageContext.github}><AiOutlineGithub /></a>
+            <a target='_blank' href={social.facebook.internal.content}><AiFillFacebook/></a>
+            <a target='_blank' href={social.linkedin.internal.content}><AiFillLinkedin /></a>
+            <a target='_blank' href={social.github.internal.content}><AiOutlineGithub /></a>
         </div>
     )
 };

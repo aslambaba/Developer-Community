@@ -1,5 +1,13 @@
 .main{
-    background-color: violet;
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 300px;
+    background-image: url('../../images/home.jpg');
+}
+.mainHeadding{
+    color: white;
+    text-align: center;
+    margin: 00 0 !important;
+    padding: 200px 0;
 }
