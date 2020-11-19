@@ -1,11 +1,14 @@
 .MainConatiner{
     padding: 30px 10%;
     background-color: #191919;
+    padding-bottom: 100px;
 }
 .Grid{
+    width: 20%;
     text-align: center;
     border-radius: 5px;
     background-color: white;
+    margin: 5px 4px !important;
 }
 .Grid img{
     height: 150px ;
@@ -25,6 +28,7 @@
     margin: 0;
     padding: 30px 20px;
     background-color: #191919;
+    padding-bottom: 100px;
 }
 .DeveloperSec h2{
     text-align: center;
@@ -33,4 +37,8 @@
 .DeveloperSec img{
     height:150px;
     margin: 0px 20px
+}
+.MuiGrid-grid-xs-4{
+    width: 33%;
+    flex-basis: 30% !important;
 }
