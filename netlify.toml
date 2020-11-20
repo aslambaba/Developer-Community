@@ -1,4 +1,3 @@
 [build]
-  command = "npm install @material-ui/core"  
   command = "gatsby build"
   publish = "public/"
