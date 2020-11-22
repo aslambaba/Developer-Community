@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingPage from '../components/landingpage';
+import LandingPage from '../components/landingPage';
 import Layout from '../components/layout';
 import Style from './style/developers.module.css';
 
