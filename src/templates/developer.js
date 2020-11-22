@@ -3,7 +3,7 @@ import Style from './style/developer.module.css';
 import HireMeButton from '../components/hiremeButton';
 import SocialMediaIcon from '../components/socialMedia';
 import Layout from '../components/layout';
-import firebase from "gatsby-plugin-firebase"
+import firebase from "gatsby-plugin-firebase";
 
 
 function Developer({ pageContext }) {
@@ -28,7 +28,7 @@ function Developer({ pageContext }) {
 
     const [UserActivity, SetuserActivity] = useState();
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth.onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             SetuserActivity(true);
