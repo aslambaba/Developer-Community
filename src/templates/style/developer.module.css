@@ -47,3 +47,20 @@
     margin: 20px 0;
     text-align: center;
 }
+.SignupSEC{
+    margin: 40px 0;
+}
+.SignupSEC p{
+    margin: 0;
+    margin: 10px 0;
+}
+.SignBTN{
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    padding: 2px 20px;
+    background-color: #191919;
+    border-radius: 2px;
+    color: white;
+}
