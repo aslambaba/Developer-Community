@@ -7,6 +7,8 @@ import firebase from "gatsby-plugin-firebase";
 
 function Developer({ pageContext }) {
 
+    const fire = firebase.auth();
+
     const onSignupClick = () => {
         let provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function (result) {
@@ -17,7 +19,7 @@ function Developer({ pageContext }) {
     }
 
     const SignOut = () => {
-        firebase.auth().signOut().then(function() {
+        fire.signOut().then(function() {
             console.log('SignOut Successful !!')
           }).catch(function(error) {
             console.log(error);
@@ -27,7 +29,7 @@ function Developer({ pageContext }) {
 
     const [UserActivity, SetuserActivity] = useState();
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    fire.onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             SetuserActivity(true);
