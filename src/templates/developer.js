@@ -3,12 +3,10 @@ import Style from './style/developer.module.css';
 import HireMeButton from '../components/hiremeButton';
 import SocialMediaIcon from '../components/socialMedia';
 import Layout from '../components/layout';
-import firebase from "gatsby-plugin-firebase";
-import 'firebase/auth';
+import firebase, {auth} from "gatsby-plugin-firebase";
 
 function Developer({ pageContext }) {
 
-    const fire = firebase.auth();
 
     const onSignupClick = () => {
         let provider = new firebase.auth.GoogleAuthProvider();
@@ -20,7 +18,7 @@ function Developer({ pageContext }) {
     }
 
     const SignOut = () => {
-        fire.signOut().then(function() {
+        firebase.auth().signOut().then(function() {
             console.log('SignOut Successful !!')
           }).catch(function(error) {
             console.log(error);
@@ -30,7 +28,7 @@ function Developer({ pageContext }) {
 
     const [UserActivity, SetuserActivity] = useState();
 
-    fire.onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             SetuserActivity(true);
