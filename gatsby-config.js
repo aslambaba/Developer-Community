@@ -23,6 +23,9 @@ module.exports = {
           messagingSenderId: "166212288546",
           appId: "1:166212288546:web:1723244da94c715a5a4a7b"
         },
+        features: {
+          auth: true,
+        }
       },
     }
   ],
