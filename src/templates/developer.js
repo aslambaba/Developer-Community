@@ -3,7 +3,7 @@ import Style from './style/developer.module.css';
 import HireMeButton from '../components/hiremeButton';
 import SocialMediaIcon from '../components/socialMedia';
 import Layout from '../components/layout';
-import firebase from "gatsby-plugin-firebase";
+import firebase, { onAuthStateChanged, } from "gatsby-plugin-firebase";
 
 function Developer({ pageContext }) {
 
