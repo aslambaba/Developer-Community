@@ -60,7 +60,7 @@ function Developer({ pageContext }) {
                             UserActivity === false
                                 ?
                                 <div className={Style.SignupSEC}>
-                                    <p>Please Login With Google To Contact Our Freelancer</p>
+                                    <p>Please Login/Signup With Google To Contact Our Freelancer</p>
                                     <button onClick={onSignupClick} className={Style.SignBTN}>Signup</button>
                                 </div>
                                 :
