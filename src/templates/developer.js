@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Style from './style/developer.module.css';
 import HireMeButton from '../components/hiremeButton';
 import SocialMediaIcon from '../components/socialMedia';
 import Layout from '../components/layout';
-import firebase, { onAuthStateChanged, } from "gatsby-plugin-firebase";
+import firebase from "gatsby-plugin-firebase";
 
 function Developer({ pageContext }) {
 
+    const [UserActivity, SetuserActivity] = useState();
+
+    useEffect(()=>{
+
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+                SetuserActivity(true);
+            } else {
+                SetuserActivity(false)
+                // No user is signed in.
+            }
+        });
+
+    },[])
 
     const onSignupClick = () => {
         let provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth.signInWithPopup(provider).then(function (result) {
+        firebase.auth().signInWithPopup(provider).then(function (result) {
             console.log('Google Successful')
         }).catch(function (error) {
             console.log('Google Error')
@@ -18,26 +33,13 @@ function Developer({ pageContext }) {
     }
 
     const SignOut = () => {
-        firebase.auth.signOut().then(function() {
+        firebase.auth().signOut().then(function() {
             console.log('SignOut Successful !!')
           }).catch(function(error) {
             console.log(error);
           });
     }
     console.log(pageContext);
-
-    const [UserActivity, SetuserActivity] = useState();
-
-    firebase.auth.onAuthStateChanged(function (user) {
-        if (user) {
-            // User is signed in.
-            SetuserActivity(true);
-        } else {
-            SetuserActivity(false)
-            // No user is signed in.
-        }
-    });
-
     return (
         <Layout>
             <div className={Style.mainSec}>
