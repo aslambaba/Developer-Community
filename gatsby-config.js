@@ -16,12 +16,12 @@ module.exports = {
       options: {
         credentials: {
           apiKey: process.env.FB_apiKey,
-          authDomain: process.env.authDomain,
-          databaseURL: process.env.databaseURL,
-          projectId: process.env.projectId,
-          storageBucket: process.env.storageBucket,
-          messagingSenderId: process.env.messagingSenderId,
-          appId: process.env.appId
+          authDomain: process.env.FB_authDomain,
+          databaseURL: process.env.FB_databaseURL,
+          projectId: process.env.FB_projectId,
+          storageBucket: process.env.FB_storageBucket,
+          messagingSenderId: process.env.FB_messagingSenderId,
+          appId: process.env.FB_appId
         },
         features: {
           auth: true,
